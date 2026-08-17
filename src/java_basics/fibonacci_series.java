@@ -2,7 +2,7 @@ package java_basics;
 
 public class fibonacci_series 
 {
-	static int fibonacci(int a)
+	 int fibonacci(int a)
 	{
 		if(a<=1)
 		{
@@ -19,7 +19,8 @@ public class fibonacci_series
 	}
 	public static void main(String[] args)
 	{
-		int result=fibonacci(4);
+		fibonacci_series test=new fibonacci_series();
+		int result=test.fibonacci(4);
 		System.out.println("fibonacci:"+result);
 	}
 	
