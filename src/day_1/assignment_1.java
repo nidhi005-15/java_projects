@@ -83,7 +83,7 @@ public class assignment_1
                 }
             }
 
-            System.out.print("\nContinue? (y/n): ");
+            System.out.print("\nProceed? (y/n): ");
             String ans = sc.nextLine().trim().toLowerCase();
             if (ans.equals("n"))
             {
