@@ -20,7 +20,7 @@ public class armstrong_no {
 			System.out.println("It is an armstrong number");
 		}
 		else
-			System.out.println("It is an armstrong number");
+			System.out.println("It is not an armstrong number");
 		
 	}
 	
