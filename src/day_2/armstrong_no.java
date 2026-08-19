@@ -21,6 +21,7 @@ public class armstrong_no {
 		}
 		else
 			System.out.println("It is not an armstrong number");
+		sc.close();
 		
 	}
 	

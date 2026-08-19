@@ -9,7 +9,7 @@ public class assignment_1
         String name = "";
         int age = 0;
         String desgn = "";
-        double salary = 0.0;
+        
 
         while (true)
         {
@@ -21,54 +21,34 @@ public class assignment_1
             switch (choice)
             {
                 case 1:
-                {
-                    System.out.print("Enter your name:");
-                    name = sc.nextLine();
+                {   char ch;
+                	do {
+                		System.out.print("Enter your name:");
+                		name = sc.nextLine();
 
-                    System.out.print("Enter your age:");
-                    age = sc.nextInt();
-                    sc.nextLine();
+                		System.out.print("Enter your age:");
+                		age = sc.nextInt();
+                		sc.nextLine();
 
-                    System.out.print("Enter your designation(Programmer or Manager or Tester):");
-                    desgn = sc.nextLine();
-
-                    System.out.print("Enter current salary:");
-                    salary = sc.nextDouble();
-                    sc.nextLine();
-
-                    System.out.println("Employee created successfully!");
-                    break;
+                		System.out.print("Enter your designation(Programmer or Manager or Tester):");
+                		desgn = sc.next();
+                		sc.nextLine();
+                		System.out.println("Employee created successfully!");
+                    
+                		System.out.println("Proceed adding extra?(y/n)");
+                		ch=sc.next().charAt(0);
+                		sc.nextLine();
+                	}while(ch=='y'||ch=='Y');
+                	break;
                 }
                 case 2:
                 {
-                    if (name.isEmpty())
-                    {
-                        System.out.println("No employee created yet. Choose option 1 first.");
-                    }
-                    else
-                    {
-                        System.out.println("Name:" + name);
-                        System.out.println("Age:" + age);
-                        System.out.println("Designation:" + desgn);
-                        System.out.println("Salary:" + salary);
-                    }
-                    break;
+                	break;
                 }
+                
                 case 3:
                 {
-                    if (name.isEmpty())
-                    {
-                        System.out.println("No employee created yet. Choose option 1 first.");
-                    }
-                    else
-                    {
-                        System.out.print("Enter your raise:");
-                        double raise = sc.nextDouble();
-                        sc.nextLine();
-                        salary = salary + raise;
-                        System.out.println("Salary updated. New salary:" + salary);
-                    }
-                    break;
+                	break;
                 }
                 case 4:
                 {
@@ -83,19 +63,8 @@ public class assignment_1
                 }
             }
 
-            System.out.print("\nProceed? (y/n): ");
-            String ans = sc.nextLine().trim().toLowerCase();
-            if (ans.equals("n"))
-            {
-                System.out.println("Stopped.");
-                break;
-            }
-            else if (!ans.equals("y"))
-            {
-                System.out.println("Invalid input. Stopping.");
-                break;
-            }
+            
         }
-        sc.close();
+       
     }
 }
