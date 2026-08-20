@@ -1,7 +1,9 @@
-package day_2;
+package day_3;
+
+
 import java.util.*;
 
-public abstract class assignment_2
+public abstract class assignment_3
 {   static String name=" ";
 	static int age=0;
 	static String desgn=" ";
@@ -11,7 +13,7 @@ public abstract class assignment_2
 		while(true)
 		{
 			System.out.println(" 1.Create  2. Display  3. Raise salary 4. exit");
-			System.out.print("enter your choice:");
+			System.out.println("enter your choice:");
 			int choice=sc.nextInt();
 			sc.nextLine();
 			switch(choice)
