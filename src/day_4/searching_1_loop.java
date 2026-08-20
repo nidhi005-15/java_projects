@@ -1,8 +1,4 @@
 package day_4;
-
-
-
-
 public class searching_1_loop {
 	public static void main(String[] args) {
 		int n=100000;
@@ -25,7 +21,6 @@ public class searching_1_loop {
 		
 	}
 	System.out.println("Student found:"+found);
-
 }
 }
 
