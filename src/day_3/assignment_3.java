@@ -1,19 +1,18 @@
 package day_3;
-
-
 import java.util.*;
 
 public abstract class assignment_3
 {   static String name=" ";
 	static int age=0;
 	static String desgn=" ";
+	static int salary=0;
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args)
 	{
 		while(true)
 		{
 			System.out.println(" 1.Create  2. Display  3. Raise salary 4. exit");
-			System.out.println("enter your choice:");
+			System.out.print("enter your choice:");
 			int choice=sc.nextInt();
 			sc.nextLine();
 			switch(choice)
@@ -41,7 +40,7 @@ public abstract class assignment_3
 	static void create()
 	{	char ch;
 		do {
-			
+			// ---- Name validation ----
 			int spaceCount;
 			do {
 				System.out.print("Enter your name:");
@@ -60,7 +59,7 @@ public abstract class assignment_3
 			} while (spaceCount > 2);
 			System.out.println("Valid name: " + name);
 
-			
+			// ---- Age validation ----
 			do {
 				System.out.print("Enter your age:");
 				age = sc.nextInt();
@@ -86,6 +85,15 @@ public abstract class assignment_3
 					   desgn.equalsIgnoreCase("Manager") ||
 					   desgn.equalsIgnoreCase("Tester")));
 
+			// ---- Assign fixed salary based on designation ----
+			if (desgn.equalsIgnoreCase("Programmer")) {
+				salary = 20000;
+			} else if (desgn.equalsIgnoreCase("Manager")) {
+				salary = 25000;
+			} else if (desgn.equalsIgnoreCase("Tester")) {
+				salary = 15000;
+			}
+
 			System.out.println("Employee created successfully!");
 
 			System.out.println("Proceed adding extra?(y/n)");
@@ -98,5 +106,6 @@ public abstract class assignment_3
 		System.out.println("name:"+name);
 		System.out.println("age:"+age);
 		System.out.println("designtion:"+desgn);
+		System.out.println("salary:"+salary);
 	}
 }
