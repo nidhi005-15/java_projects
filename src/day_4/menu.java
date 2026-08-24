@@ -38,7 +38,7 @@ public class menu {
 		if(ch=='n')
 			System.exit(0);
 		
-		
+	sc.close();
 	}
 	}	
 

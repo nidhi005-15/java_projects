@@ -40,6 +40,7 @@ public static void main(String[] args) {
 	}while(ch=='y');
 	if(ch=='n')
 		System.exit(0);
+	sc.close();
 	
 	
 }
