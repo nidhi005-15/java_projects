@@ -26,10 +26,10 @@ public class assingment_day_6 {
             System.out.print("enter your choice:");
 
             int choice;
-            
+
             while (!sc.hasNextInt()) {
                 System.out.println("Invalid choice! Enter a number.");
-                sc.next(); // discard bad token
+                sc.next(); 
                 System.out.print("enter your choice:");
             }
             choice = sc.nextInt();
@@ -64,29 +64,37 @@ public class assingment_day_6 {
             String desgn;
             double salary;
 
-           
-            int spaceCount;
+            
+            boolean isValidName;
             do {
                 System.out.print("Enter your name:");
                 name = sc.nextLine();
+                isValidName = true;
 
-                spaceCount = 0;
+                int spaceCount = 0;
                 for (int i = 0; i < name.length(); i++) {
                     if (name.charAt(i) == ' ') {
                         spaceCount++;
                     }
                 }
 
-                if (spaceCount > 2) {
+                if (name.trim().isEmpty()) {
+                    System.out.println("Invalid name! Name cannot be empty.");
+                    isValidName = false;
+                } else if (!name.matches("[a-zA-Z ]+")) {
+                    System.out.println("Invalid name! Numbers and special characters are not allowed.");
+                    isValidName = false;
+                } else if (spaceCount > 2) {
                     System.out.println("Invalid name! More than 2 spaces are not allowed. Enter correctly.");
+                    isValidName = false;
                 } else if (employees.containsKey(name)) {
                     System.out.println("Employee with this name already exists! Enter a different name.");
-                    spaceCount = 99; // force re-loop
+                    isValidName = false;
                 }
-            } while (spaceCount > 2);
+            } while (!isValidName);
             System.out.println("Valid name: " + name);
 
-          
+            //age
             do {
                 System.out.print("Enter your age:");
                 while (!sc.hasNextInt()) {
@@ -103,7 +111,7 @@ public class assingment_day_6 {
             } while (age < 18 || age > 60);
             System.out.println("Valid age: " + age);
 
-            
+            // ---- Designation validation----------
             do {
                 System.out.print("Enter your designation(Programmer or Manager or Tester):");
                 desgn = sc.nextLine();
@@ -117,7 +125,7 @@ public class assingment_day_6 {
                        desgn.equalsIgnoreCase("Manager") ||
                        desgn.equalsIgnoreCase("Tester")));
 
-            
+            // ---- Salary assignment ----
             if (desgn.equalsIgnoreCase("Programmer")) {
                 salary = 20000;
             } else if (desgn.equalsIgnoreCase("Manager")) {
@@ -158,7 +166,7 @@ public class assingment_day_6 {
         }
 
         Employee emp = null;
-        
+
         while (emp == null) {
             System.out.print("Enter the name of the employee:");
             String name = sc.nextLine();
@@ -169,7 +177,7 @@ public class assingment_day_6 {
         }
 
         double percent = -1;
-        
+
         while (percent < 1 || percent > 10) {
             System.out.print("Enter percentage increase (1-10):");
             while (!sc.hasNextDouble()) {
