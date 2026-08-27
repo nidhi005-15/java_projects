@@ -15,5 +15,4 @@ public class Backtracking_example_2{
 		guessnumber(5);
 		guessnumber(8);
 	}	
-	
 }
