@@ -26,7 +26,7 @@ public class assingment_day_6 {
             System.out.print("enter your choice:");
 
             int choice;
-            // ---- Choice validation (no crash on non-numeric entry) ----
+            
             while (!sc.hasNextInt()) {
                 System.out.println("Invalid choice! Enter a number.");
                 sc.next(); // discard bad token
@@ -64,7 +64,7 @@ public class assingment_day_6 {
             String desgn;
             double salary;
 
-            // ---- Name validation ----
+           
             int spaceCount;
             do {
                 System.out.print("Enter your name:");
@@ -86,7 +86,7 @@ public class assingment_day_6 {
             } while (spaceCount > 2);
             System.out.println("Valid name: " + name);
 
-            // ---- Age validation ----
+          
             do {
                 System.out.print("Enter your age:");
                 while (!sc.hasNextInt()) {
@@ -103,7 +103,7 @@ public class assingment_day_6 {
             } while (age < 18 || age > 60);
             System.out.println("Valid age: " + age);
 
-            // ---- Designation validation ----
+            
             do {
                 System.out.print("Enter your designation(Programmer or Manager or Tester):");
                 desgn = sc.nextLine();
@@ -117,7 +117,7 @@ public class assingment_day_6 {
                        desgn.equalsIgnoreCase("Manager") ||
                        desgn.equalsIgnoreCase("Tester")));
 
-            // ---- Assign fixed salary based on designation ----
+            
             if (desgn.equalsIgnoreCase("Programmer")) {
                 salary = 20000;
             } else if (desgn.equalsIgnoreCase("Manager")) {
@@ -158,7 +158,7 @@ public class assingment_day_6 {
         }
 
         Employee emp = null;
-        // ---- Name validation: keep asking till a real employee is entered ----
+        
         while (emp == null) {
             System.out.print("Enter the name of the employee:");
             String name = sc.nextLine();
@@ -169,7 +169,7 @@ public class assingment_day_6 {
         }
 
         double percent = -1;
-        // ---- Percentage validation: 1-10 only ----
+        
         while (percent < 1 || percent > 10) {
             System.out.print("Enter percentage increase (1-10):");
             while (!sc.hasNextDouble()) {
