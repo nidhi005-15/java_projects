@@ -16,21 +16,21 @@ class Employee {
     }
 }
 
-public class assingment_day_6 {
+public class Project {
     static Map<String, Employee> employees = new HashMap<>();
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         while (true) {
             System.out.println("\n 1.Create  2. Display  3. Raise salary  4. Exit");
-            System.out.print("enter your choice:");
+            System.out.print("Enter your choice:");
 
             int choice;
 
             while (!sc.hasNextInt()) {
                 System.out.println("Invalid choice! Enter a number.");
                 sc.next(); 
-                System.out.print("enter your choice:");
+                System.out.print("Enter your choice:");
             }
             choice = sc.nextInt();
             sc.nextLine();
@@ -111,7 +111,7 @@ public class assingment_day_6 {
             } while (age < 18 || age > 60);
             System.out.println("Valid age: " + age);
 
-            // ---- Designation validation----------
+            
             do {
                 System.out.print("Enter your designation(Programmer or Manager or Tester):");
                 desgn = sc.nextLine();
@@ -125,7 +125,7 @@ public class assingment_day_6 {
                        desgn.equalsIgnoreCase("Manager") ||
                        desgn.equalsIgnoreCase("Tester")));
 
-            // ---- Salary assignment ----
+            
             if (desgn.equalsIgnoreCase("Programmer")) {
                 salary = 20000;
             } else if (desgn.equalsIgnoreCase("Manager")) {
