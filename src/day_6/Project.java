@@ -46,6 +46,7 @@ public class Project {
                     raiseSalary();
                     break;
                 case 4:
+                	    System.out.println("Thank you for choosing this application");
                     System.out.println("EXIT");
                     sc.close();
                     return;
