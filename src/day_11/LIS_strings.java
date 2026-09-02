@@ -11,7 +11,7 @@ public class LIS_strings {
 				for(int j=0;j<i;j++) {
 					if(arr[j]<arr[i]) {
 						dp[i]=Math.max(dp[i],dp[j]+1);
-					}
+			 		}
 				}
 				max=Math.max(max, dp[i]);
 			}
