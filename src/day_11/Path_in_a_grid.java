@@ -16,8 +16,11 @@ public class Path_in_a_grid {
 				dp[i][j]=dp[i-1][j]+dp[i][j-1];
 			}
 		}
+		
+		
 		System.out.println("number of paths = "+dp[rows-1][cols-1]);
 		
 	}
+	
 
 }
