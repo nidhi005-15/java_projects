@@ -16,6 +16,4 @@ public class Jump_game {
 			System.out.println("Cannot reach the last position");
 		}
 	}
-	
-
 }
